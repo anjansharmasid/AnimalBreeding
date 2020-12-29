@@ -30,7 +30,6 @@ int motherAge = 3;
 boolean isFemale = true;
 String endDateOfBreadingProgram = "2018-12-28";
 String name = Register.rootName;
-    	
 new Dog(motherDateOfBirth,motherAge,isFemale,endDateOfBreadingProgram,name);
 
 Output:
