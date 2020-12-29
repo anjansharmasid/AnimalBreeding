@@ -15,7 +15,7 @@ public static int numberOfFemale = 2;
 Once the animal reaches breadingStartAge age the animal breeds. Change this value accordingly. 
 public static int breadingStartAge = 3;
 
-Once the animal reaches breadingEndAge age the animal stop breeds. Change this value accordingly.
+Once the animal reaches breadingEndAge age the animal stop breed. Change this value accordingly.
 public static int breadingStopAge = 10;
 
 Date format used, change to other valid format as needed.
