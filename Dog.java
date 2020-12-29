@@ -22,9 +22,9 @@ public class Dog {
 	
 	/*
 	 * Date of birth of the dog String birthDate
-     * Age of the femalee dog which was participating in the breading program: int age 
+     * Age of the femalee dog which was participating in the Breeding program: int age 
      * Sex of the dog,  Boolean female
-     * Final date of the breading program when results will be calculated : String finalDate
+     * Final date of the Breeding program when results will be calculated : String finalDate
      */
 	
 	public Dog (String birthDate, int age, Boolean female, String finalDate, String name ){
@@ -38,7 +38,7 @@ public class Dog {
 	 	this.name = name + "-" + this.serialNumber;
 	 	Register.registerDogBirth(this);
 	 	tName = Register.rootName + "-1";
-	 	String message =  this.name.equals(tName) ? " is added to the breading program, at age "+ this.age + ", date of enrolement ": " puppy is born at ";
+	 	String message =  this.name.equals(tName) ? " is added to the Breeding program, at age "+ this.age + ", date of enrolement ": " puppy is born at ";
 	 	System.out.println("Dog serialNumber " + this.serialNumber + ", a "+ sex+message + birthDate);
 	 	this.yearRemaining = yearRemaining();
 	 	//The startThisDog will generate  recursive call to this object.  
@@ -59,10 +59,10 @@ public class Dog {
 	 *  This needs to be incremented once every year.
 	 */
 	public boolean increaseAge() {
-		if(this.isBreadingEventActive()){
+		if(this.isBreedingEventActive()){
 			System.out.println("Dog " + serialNumber + ", current age " + this.age);
 			if(this.age <10) {
-				this.breadDog();
+				this.BreedDog();
 				this.age = this.age + 1;
 				increaseChildAge();
 				System.out.println("Dog " + serialNumber + ", age increased by 1 to " + this.age);
@@ -82,28 +82,28 @@ public class Dog {
 	}
 	
 	/*
-	 *  We do not want to continue counting after the breading program ends for this dog. 
+	 *  We do not want to continue counting after the Breeding program ends for this dog. 
 	 *  Only dog age >= 3 and <= 10 are allowed to take part in the program.
 	 *  The very first dog ("root-1"), can immediately participate in the program.
 	 *  Other dogs has to wait till they are 3 year old. 
 	 *  this.generation indicates how many years has elapsed since the program has started. 
 	 */
-	private boolean isBreadingEventActive() {
-		if (this.age >=Register.breadingStartAge && this.age <= Register.breadingStopAge) {
+	private boolean isBreedingEventActive() {
+		if (this.age >=Register.breedingStartAge && this.age <= Register.breedingStopAge) {
 			if(this.name.equals(tName)) {
 				if(this.yearRemaining >=0) {
-					System.out.println("Qualified for BreadingEventActive. Dog "+this.serialNumber+ " age "+ this.age + " yearRemaining " + this.yearRemaining);
+					System.out.println("Qualified for BreedingEventActive. Dog "+this.serialNumber+ " age "+ this.age + " yearRemaining " + this.yearRemaining);
 					return true;
 				}else {
-					System.out.println("Breading program is over. Dog "+ this.serialNumber + " age "+this.age + " yearRemaining " + this.yearRemaining);
+					System.out.println("Breeding program is over. Dog "+ this.serialNumber + " age "+this.age + " yearRemaining " + this.yearRemaining);
 					return true;
 				}
 			}else {
 				if(this.yearRemaining - this.generation >=0) {
-					System.out.println("Qualified for BreadingEventActive. Dog "+this.serialNumber+ " age "+ this.age + " yearRemaining " + this.yearRemaining);
+					System.out.println("Qualified for BreedingEventActive. Dog "+this.serialNumber+ " age "+ this.age + " yearRemaining " + this.yearRemaining);
 					return true;
 				}else {
-					System.out.println("Breading program is over. Dog "+ this.serialNumber + " age "+this.age + " yearRemaining " + this.yearRemaining);
+					System.out.println("Breeding program is over. Dog "+ this.serialNumber + " age "+this.age + " yearRemaining " + this.yearRemaining);
 					return false;
 				}
 			}
@@ -117,12 +117,12 @@ public class Dog {
 	/*
 	 *  Give birth from the age of 3 till the age of 10.
 	 *  Dog give birth of two femalee and one male poppy
-	 *  breadDog will not continue when final breading date( finalDate ) is arrived.
+	 *  BreedDog will not continue when final Breeding date( finalDate ) is arrived.
 	 */
-	private void breadDog() {
+	private void BreedDog() {
 		
-		if(this.female  && this.age >= Register.breadingStartAge  && this.age <= Register.breadingStopAge ) {
-			System.out.println("Dog "+this.serialNumber + " is in breading. Dog  "+ " age "+ this.age);
+		if(this.female  && this.age >= Register.breedingStartAge  && this.age <= Register.breedingStopAge ) {
+			System.out.println("Dog "+this.serialNumber + " is in Breeding. Dog  "+ " age "+ this.age);
 			DateTimeFormatter formatter = DateTimeFormatter.ofPattern(Register.pattern);
 			LocalDate tmpDateOfBirth = LocalDate.parse(birthDate, formatter);
 			LocalDate puppyDateOfBirth = null;
@@ -140,7 +140,7 @@ public class Dog {
 			}
 			this.generation = this.generation+1; 
 		}
-		System.out.println("Breading complete for dog " + this.serialNumber + " name "+this.name + ". Decrease remaining years by one once.");
+		System.out.println("Breeding complete for dog " + this.serialNumber + " name "+this.name + ". Decrease remaining years by one once.");
 		
 		// The yearRemaining must be reduced by one.
 		this.yearRemaining = this.yearRemaining -1;
