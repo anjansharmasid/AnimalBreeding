@@ -45,7 +45,9 @@ Output:
 
 ==================================== 
 
-List of all dogs produced by the breeding program ==================================== 
+List of all dogs produced by the breeding program 
+
+==================================== 
 
 Dog [serialNumber=1, name=root-1, age=5, female=true, birthDate=2017-12-28] 
 
