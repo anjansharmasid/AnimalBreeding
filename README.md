@@ -6,19 +6,25 @@ Configuration:
 All configuration parameters are in  Register.java. Change these values accordingly for your estimations.
 
 This is the name of the first mother. 
+
 public static String rootName = "root";
 
 We are assuming that in one breeding iteration there will be one male and two female childs. Change this accordingle to your estimation.
+
 public static int numberOfMale = 1;
+
 public static int numberOfFemale = 2;
 
 Once the animal reaches breadingStartAge age the animal breeds. Change this value accordingly. 
+
 public static int breadingStartAge = 3;
 
 Once the animal reaches breadingEndAge age the animal stop breed. Change this value accordingly.
+
 public static int breadingStopAge = 10;
 
 Date format used, change to other valid format as needed.
+
 public static String pattern = "yyyy-MM-dd"; 
 
 
