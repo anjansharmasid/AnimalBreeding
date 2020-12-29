@@ -6,15 +6,15 @@ public class DogBreeder {
     	String motherDateOfBirth = "2017-12-28";
     	int motherAge = 3;
     	boolean isFemale = true;
-    	String endDateOfBreadingProgram = "2018-12-28";
+    	String endDateOfBreedingProgram = "2018-12-28";
     	String name = Register.rootName;
     	
-    	new Dog(motherDateOfBirth,motherAge,isFemale,endDateOfBreadingProgram,name);
+    	new Dog(motherDateOfBirth,motherAge,isFemale,endDateOfBreedingProgram,name);
 
 
     	System.out.println("==================================================================================");
     	System.out.println("==================================================================================");
-    	System.out.println(" List of all dogs produced by the breading program ");
+    	System.out.println(" List of all dogs produced by the breeding program ");
     	System.out.println("==================================================================================");
     	System.out.println("==================================================================================");
     	Register.Birth_Register.forEach(dog->System.out.println(dog.toString()));
