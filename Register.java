@@ -19,7 +19,7 @@ public static String rootName = "root";
 
 public static int numberOfMale = 1;
 public static int numberOfFemale = 2;
-public static int breadingStartAge = 3;
-public static int breadingStopAge = 10;
+public static int breedingStartAge = 3;
+public static int breedingStopAge = 10;
 public static String pattern = "yyyy-MM-dd";
 }
