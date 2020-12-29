@@ -34,15 +34,21 @@ String name = Register.rootName;
 new Dog(motherDateOfBirth,motherAge,isFemale,endDateOfBreadingProgram,name);
 
 Output:
+-------------------------------------------------------------------------------------
+List of all dogs produced by the breeding program 
+--------------------------------------------------------------------------------------
+Dog [serialNumber=1, name=root-1, age=5, female=true, birthDate=2017-12-28] 
 
-List of all dogs produced by the breading program 
-
-Dog [serialNumber=1, name=root-1, age=5, female=true, birthDate=2017-12-28]
 Dog [serialNumber=2, name=root-1-2, age=2, female=false, birthDate=2018-12-28]
+
 Dog [serialNumber=3, name=root-1-3, age=2, female=true, birthDate=2018-12-28]
+
 Dog [serialNumber=4, name=root-1-4, age=2, female=true, birthDate=2018-12-28]
+
 Dog [serialNumber=5, name=root-1-5, age=1, female=false, birthDate=2019-12-28]
+
 Dog [serialNumber=6, name=root-1-6, age=1, female=true, birthDate=2019-12-28]
+
 Dog [serialNumber=7, name=root-1-7, age=1, female=true, birthDate=2019-12-28]
 
 '''
