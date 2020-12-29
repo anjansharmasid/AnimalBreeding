@@ -18,19 +18,24 @@ public static int breadingStartAge = 3;
 Once the animal reaches breadingEndAge age the animal stop breeds. Change this value accordingly.
 public static int breadingStopAge = 10;
 
+Date format used, change to other valid format as needed.
 public static String pattern = "yyyy-MM-dd"; 
 
 
 To run the application :
 
-'''
-
 String motherDateOfBirth = "2017-12-28";
+
 int motherAge = 3;
+
 boolean isFemale = true;
+
 String endDateOfBreadingProgram = "2018-12-28";
+
 String name = Register.rootName;
+
 new Dog(motherDateOfBirth,motherAge,isFemale,endDateOfBreadingProgram,name);
+
 
 Output:
 -------------------------------------------------------------------------------------
