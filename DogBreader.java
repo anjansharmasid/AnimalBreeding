@@ -1,6 +1,6 @@
 package basic.tools.breeder;
 
-public class DogBreeder {
+public class DogBreader {
     public static void main(String arggs[]) {
     	// Dog (String birthDate (yyyy-MM-dd), int age, Boolean female, String finalDate (yyyy-MM-dd) )
     	String motherDateOfBirth = "2017-12-28";
@@ -14,7 +14,7 @@ public class DogBreeder {
 
     	System.out.println("==================================================================================");
     	System.out.println("==================================================================================");
-    	System.out.println(" List of all dogs produced by the breeding program ");
+    	System.out.println(" List of all dogs produced by the breading program ");
     	System.out.println("==================================================================================");
     	System.out.println("==================================================================================");
     	Register.Birth_Register.forEach(dog->System.out.println(dog.toString()));
